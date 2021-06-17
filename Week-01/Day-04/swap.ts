@@ -1,4 +1,4 @@
-export {}
+"use strict";
 
 // Swap the values of these variables
 
@@ -8,5 +8,5 @@ let numberToSwap2: number = 526;
 numberToSwap1 = 526;
 numberToSwap2 = 123;
 
-console.log(numberToSwap1);
-console.log(numberToSwap2);
+console.log("new value for Swap1:", numberToSwap1);
+console.log("new value for Swap2:", numberToSwap2);
