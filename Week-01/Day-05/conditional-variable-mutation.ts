@@ -36,13 +36,16 @@ let isBonus: boolean = false;
 // if credits are smaller than 50,
 // and is_bonus is false decrement c by 1
 // if is_bonus is true c should remain the same
-if (isBonus === false && credits >= 50) {
-    c = c - 2;
-    console.log(c);
-} else if (isBonus === false && credits < 50) {
+if (!isBonus) {
+    if (credits >= 50) {
+        c = c - 2;
+        console.log(c);
+    }
+    if (credits < 50) {
     c = c - 1;
     console.log(c);
-} else {
+    }
+} else if (isBonus) {
     console.log(c);
 }
 
