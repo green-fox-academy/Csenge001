@@ -16,7 +16,7 @@
 // 10 * 15 = 150
 
 let number: number = 15;
-for (let a: number = 1; a < 11; a++) {
+for (let a: number = 1; a <= 10; a++) {
     console.log(a * number);
 }
 
