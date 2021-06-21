@@ -6,6 +6,7 @@
 // -  Greet `nameToGreet`
 
 let nameToGreet: string = "Green Fox";
+
 function greet() {
     console.log(`Greetings, dear ${nameToGreet} !`);
 }
