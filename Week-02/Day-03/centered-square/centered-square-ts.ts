@@ -8,6 +8,6 @@ export {};
 
 // Draw a green 10x10 square to the center of the canvas
 
-ctx.rect(295, 205, 10, 10);
 ctx.fillStyle = 'green';
-ctx.fill();
+ctx.fillRect(295, 205, 10, 10);
+
