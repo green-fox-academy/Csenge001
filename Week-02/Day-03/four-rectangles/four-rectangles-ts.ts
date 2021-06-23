@@ -9,10 +9,6 @@ export {};
 // Draw four different size and color rectangles
 // Avoid code duplication!
 
-// ctx.rect(10, 10, 100, 100);
-// ctx.fillStyle = "red";
-// ctx.fill();
-
 function drawRectangles (x: number, y: number, width: number, height: number, color: string) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, width, height);
