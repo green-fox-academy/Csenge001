@@ -1,5 +1,7 @@
 "use strict";
 
+import { Flyable } from "../flyable";
+
 abstract class Animal {
 
     name: string;
@@ -41,7 +43,20 @@ class EggLayingAnimal extends Animal {
 
 class Reptile extends EggLayingAnimal {}
 
-class Bird extends EggLayingAnimal {}
+class Bird extends EggLayingAnimal implements Flyable {
+
+    land(): void {
+        console.log("I have just landed.");
+    }
+
+    takeOff(): void {
+        console.log("I took off to begin my journey.");
+    }
+
+    fly(): void {
+        console.log("I can fly!");
+    }
+}
 
 
 export { Mammal, Reptile, Bird};
