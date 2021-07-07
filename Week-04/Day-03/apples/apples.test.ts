@@ -10,4 +10,4 @@ test ("getApple returns the given string", t => {
   
     t.equal(actual, expected);
     t.end();
-  })
+})
