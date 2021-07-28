@@ -7,7 +7,7 @@ if (toBeChanged[3].classList.value === "dolphin") {
     toBeChanged[0].innerHTML = "pear";
 }
 
-if (toBeChanged[0].classList.value === "apple") {
+if (toBeChanged[0].classList.contains("apple")) {
     toBeChanged[2].innerHTML = "dog";
 }
 
