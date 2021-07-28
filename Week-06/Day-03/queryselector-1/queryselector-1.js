@@ -1,7 +1,7 @@
 "use strict";
 
-const king = document.getElementById("b325").textContent;
-console.log(king);
+const king = document.getElementById("b325");
+console.log(king.textContent);
 
 const businessLamp = document.querySelectorAll(".big");
 console.log(businessLamp[0].textContent, ", ", businessLamp[1].textContent,);
