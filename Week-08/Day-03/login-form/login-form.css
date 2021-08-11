@@ -1,0 +1,64 @@
+body {
+    background-color: lightgray;
+    font-family: "Raleway", sans-serif;
+    font-size: 80%;
+}
+
+form {
+    background-color: #fff;
+    width: 350px;
+    height: 350px;
+    margin: 100px auto;
+    border-radius: 3px;
+    padding: 60px;
+    position: relative;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+input {
+    border-radius: 3px;
+    width: 340px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: 1px solid greenyellow;
+}
+
+i {
+    position: absolute;
+    bottom: 205px;
+    right: 85px;
+    cursor: pointer;
+    color: gray;
+}
+
+p {
+    margin: 0;
+    text-align: right;  
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 15px;
+    width: 120px;
+    margin-top: 40px;
+}
