@@ -11,7 +11,7 @@ app.use(express.json())
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Soksikert",
+    password: "password",
     database: "reddit"
 })
 
@@ -38,12 +38,12 @@ app.get("/posts", (req, res) => {
 
 app.post("/posts", (req, res) => {
     let currentTimestamp = Math.floor(Date.now() / 1000)
-    conn.query("INSERT INTO posts (title, url, timestamp) VALUES (?, ?, ?)", [req.body.title, req.body.url, currentTimestamp], (err, post) => {
+    conn.query("INSERT INTO posts (title, url, timestamp) VALUES (?, ?, ?)", [req.body.title, req.body.url, currentTimestamp], (err, insertInfo) => {
         if (err) {
             console.log(err)
             res.send(500)
         } else {
-            res.status(200).json(post)
+            res.status(200).json(insertInfo)
         }
     })
 })
