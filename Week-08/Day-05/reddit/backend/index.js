@@ -2,11 +2,13 @@
 
 import express from "express"
 import mysql from "mysql2"
+import cors from "cors"
 
 const app = express()
 const port = 3000
 
 app.use(express.json())
+app.use(cors())
 
 const conn = mysql.createConnection({
     host: "localhost",
@@ -38,12 +40,19 @@ app.get("/posts", (req, res) => {
 
 app.post("/posts", (req, res) => {
     let currentTimestamp = Math.floor(Date.now() / 1000)
-    conn.query("INSERT INTO posts (title, url, timestamp) VALUES (?, ?, ?)", [req.body.title, req.body.url, currentTimestamp], (err, insertInfo) => {
+    conn.query("INSERT INTO posts (title, url, timestamp) VALUES (?, ?, ?)", [req.body.title, req.body.url, currentTimestamp], (err, newPost) => {
         if (err) {
             console.log(err)
             res.send(500)
         } else {
-            res.status(200).json(insertInfo)
+            conn.query("SELECT * FROM posts WHERE id = ?", [newPost.insertId], (err, result) => {
+                if (err) {
+                    console.log(err);
+                    res.send(500)
+                } else {
+                    res.status(200).send(JSON.stringify(result))
+                }
+            })
         }
     })
 })
