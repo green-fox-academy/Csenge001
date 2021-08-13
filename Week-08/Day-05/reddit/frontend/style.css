@@ -1,0 +1,71 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 50px;
+    background-color: gainsboro;
+}
+
+header {
+    background-image: url("space.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+h1 {
+    color: gainsboro;
+    letter-spacing: 50px;
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+}
+
+main {
+    display: flex;
+    margin-top: 40px;
+}
+
+section {
+    width: 60%;
+}
+
+div {
+    background-color: whitesmoke;
+    border: 1px solid gainsboro;
+    padding: 20px;
+}
+
+aside {
+    width: 40%;
+    margin-left: 20px;
+}
+
+a {
+    margin-right: 20px;
+}
+
+button {
+    background-color: #e85f05;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.about {
+    background-color: rgb(232 232 232);
+    padding: 20px;
+}
+
+.about h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.about p {
+    text-align: center;
+    margin-bottom: 20px;
+}
