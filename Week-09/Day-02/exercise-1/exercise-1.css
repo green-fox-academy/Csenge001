@@ -1,0 +1,30 @@
+#container {
+    background-color: green;
+    color: green;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+}
+
+.divelements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left {
+    background-color: yellow;
+    margin: 10px 0 10px 10px;
+}
+
+
+#right {
+    background-color: yellow;
+    margin: 10px 10px 10px 0;
+}
+
+#middle {
+    background-color: greenyellow;
+    margin: 10px 0;
+}
